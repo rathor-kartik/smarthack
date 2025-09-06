@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar";
 import Hero from "../Components/Hero";
 import Footer from "../Components/Footer";
 import CropCard from "../Components/CropCard";
-import CropPieChart from "../Components/PieCharts";
+// import CropPieChart from "../Components/PieCharts";
 import SoilInfo from "../Components/SoilInfo";
 import WeatherFinder from "../Components/WeatherFinder";
 
@@ -87,7 +87,7 @@ const Home: React.FC = () => {
           Insights & Analytics
         </h2>
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
-          <CropPieChart />
+          {/* <CropPieChart /> */}
           <SoilInfo
             ph={6.5}
             nitrogen={40}
