@@ -6,18 +6,36 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-green-600 text-white px-6 py-4 flex justify-between items-center">
-      <div className="text-2xl font-bold">FarmWise</div>
+      <div className="text-2xl font-bold">विकाश किशुपुरा</div>
       <div className="space-x-6">
-        <Link to="/" className="hover:text-gray-200">Home</Link>
-        <Link to="/crops" className="hover:text-gray-200">Crops</Link>
-        <Link to="/insights" className="hover:text-gray-200">Insights</Link>
+        <Link to="/" className="hover:text-gray-200">
+          Home
+        </Link>
+        <Link to="/crops" className="hover:text-gray-200">
+          Crops
+        </Link>
+        <Link to="/insights" className="hover:text-gray-200">
+          Insights
+        </Link>
         {!user ? (
           <>
-            <Link to="/login" className="hover:text-gray-200">Login</Link>
-            <Link to="/signup" className="hover:text-gray-200">Sign Up</Link>
+            <Link to="/login" className="hover:text-gray-200">
+              Login
+            </Link>
+            <Link to="/signup" className="hover:text-gray-200">
+              Sign Up
+            </Link>
           </>
         ) : (
-          <span className="hover:text-gray-200 cursor-pointer" onClick={() => { localStorage.removeItem("user"); window.location.href = "/"; }}>Logout</span>
+          <span
+            className="hover:text-gray-200 cursor-pointer"
+            onClick={() => {
+              localStorage.removeItem("user");
+              window.location.href = "/";
+            }}
+          >
+            Logout
+          </span>
         )}
       </div>
     </nav>
