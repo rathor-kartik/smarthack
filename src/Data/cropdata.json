@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Wheat",
+    "description": "Wheat grows well in loamy soil with moderate rainfall.",
+    "successRate": 85,
+    "image":"/crop_image/rice.jpg"
+  },
+  {
+    "name": "Rice",
+    "description": "Rice requires clayey soil and high water supply.",
+    "successRate": 78,
+    "image": "/crop_image/coffee.jpg"
+  },
+  {
+    "name": "corn",
+    "description": "Rice requires clayey soil and high water supply.",
+    "successRate": 88,
+    "image": "/crop_image/coffee.jpg"
+  },
+  {
+    "name": "Tomato",
+    "description": "Rice requires clayey soil and high water supply.",
+    "successRate": 55,
+    "image": "/crop_image/coffee.jpg"
+  }
+]

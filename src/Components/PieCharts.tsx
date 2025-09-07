@@ -1,37 +1,64 @@
-// import React from "react";
-// import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
+import React from "react";
+import {
+  PieChart,
+  Pie,
+  Cell,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
+import cropsData from "../Data/cropdata.json";
 
-// interface PieData {
-//   name: string;
-//   value: number;
-// }
+const COLORS = ["#16a34a", "#facc15", "#3b82f6", "#ef4444", "#a855f7", "#f97316"];
 
-// const data: PieData[] = [
-//   { name: "Wheat", value: 85 },
-//   { name: "Rice", value: 70 },
-//   { name: "Corn", value: 90 },
-//   { name: "Tomatoes", value: 60 },
-//   { name: "Soybeans", value: 75 },
-//   { name: "Potatoes", value: 80 },
-// ];
+const CropPieChart: React.FC = () => {
+  // Map crops.json → chart-friendly data
+  const chartData = cropsData.map((crop) => ({
+    name: crop.name,
+    value: crop.successRate,
+  }));
 
-// const COLORS = ["#4ade80", "#22c55e", "#16a34a", "#facc15", "#f97316", "#ef4444"];
+  return (
+    <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+      <h2 className="text-2xl font-bold text-center mb-6 text-green-700">
+        🌱 Crop Success Rate Distribution
+      </h2>
+      <div className="w-full h-80">
+        <ResponsiveContainer>
+          <PieChart>
+            <Pie
+              data={chartData}
+              cx="50%"
+              cy="50%"
+              labelLine={false}
+              label={({ name }) =>
+                `${name} `
+              }
+              outerRadius={120}
+              dataKey="value"
+            >
+              {chartData.map((entry, index) => (
+                <Cell
+                  key={entry.name}
+                  fill={COLORS[index % COLORS.length]}
+                  stroke="#fff"
+                  strokeWidth={2}
+                />
+              ))}
+            </Pie>
+            <Tooltip
+              contentStyle={{
+                backgroundColor: "white",
+                borderRadius: "10px",
+                boxShadow: "0px 4px 10px rgba(0,0,0,0.1)",
+              }}
+            />
+            <Legend verticalAlign="bottom" height={36} />
+          </PieChart>
+        </ResponsiveContainer>
+      </div>
+    </div>
+  );
+};
 
-// const CropPieChart: React.FC = () => {
-//   return (
-//     <div className="bg-white p-6 rounded-lg shadow-lg">
-//       <h3 className="text-2xl font-semibold mb-4 text-center">Crop Success Distribution</h3>
-//       <PieChart width={300} height={300}>
-//         <Pie data={data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100} label>
-//           {data.map((entry, index) => (
-//             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-//           ))}
-//         </Pie>
-//         <Tooltip />
-//         <Legend verticalAlign="bottom" height={36} />
-//       </PieChart>
-//     </div>
-//   );
-// };
-
-// export default CropPieChart;
+export default CropPieChart;

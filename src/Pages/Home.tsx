@@ -3,9 +3,10 @@ import Navbar from "../Components/Navbar";
 import Hero from "../Components/Hero";
 import Footer from "../Components/Footer";
 import CropCard from "../Components/CropCard";
-// import CropPieChart from "../Components/PieCharts";
+import CropPieChart from "../Components/PieCharts";
 import SoilInfo from "../Components/SoilInfo";
 import WeatherFinder from "../Components/WeatherFinder";
+import cropsData from "../Data/cropdata.json";
 
 const Home: React.FC = () => {
   return (
@@ -71,14 +72,9 @@ const Home: React.FC = () => {
           Crop Success Rate Predictions
         </h2>
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
-          {cropsData.map((crop) => (
-            <CropCard
-              key={crop.name}
-              name={crop.name}
-              successRate={crop.successRate}
-              description={crop.description}
-            />
-          ))}
+          {cropsData.map((crop, index) => (
+          <CropCard key={index} {...crop} />
+        ))}
         </div>
       </section>
 
@@ -87,7 +83,7 @@ const Home: React.FC = () => {
           Insights & Analytics
         </h2>
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
-          {/* <CropPieChart /> */}
+          <CropPieChart />
           <SoilInfo
             ph={6.5}
             nitrogen={40}
@@ -121,39 +117,6 @@ const Home: React.FC = () => {
   );
 };
 
-// dataset
-const cropsData = [
-  {
-    name: "Wheat",
-    successRate: 85,
-    description: "Wheat is highly suitable for your soil type and climate.",
-  },
-  {
-    name: "Rice",
-    successRate: 70,
-    description: "Rice grows well with proper water management.",
-  },
-  {
-    name: "Corn",
-    successRate: 90,
-    description: "Corn is predicted to give high yields this season.",
-  },
-  {
-    name: "Tomatoes",
-    successRate: 60,
-    description: "Tomatoes require careful monitoring for pests and moisture.",
-  },
-  {
-    name: "Soybeans",
-    successRate: 75,
-    description: "Soybeans are moderately suitable and profitable.",
-  },
-  {
-    name: "Potatoes",
-    successRate: 80,
-    description:
-      "Potatoes thrive in well-drained soil with balanced nutrients.",
-  },
-];
+
 
 export default Home;
