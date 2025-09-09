@@ -12,7 +12,7 @@ const Insights: React.FC = () => {
         <Navbar/>
       <div className="py-20 px-6 bg-green-50 min-h-screen">
         <h2 className="text-4xl font-bold text-center mb-12">
-          Farm Insights Dashboard
+          Farm Insights kartttt 
         </h2>
 
         <div className="grid gap-10 max-w-7xl mx-auto md:grid-cols-2 lg:grid-cols-3">
