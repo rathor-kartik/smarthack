@@ -4,11 +4,13 @@ const Hero: React.FC = () => {
   return (
     <section className="bg-green-100 py-20 px-6 text-center">
       <h1 className="text-5xl font-bold mb-4 text-green-900">
-        Grow Smart, Grow Profitable
+        Welcome to Kissan Sarthi 
+      </h1>
+      <h1 className="text-5xl font-bold mb-4 text-green-900">
+        Your Trusted Companion for Smarter Farming!
       </h1>
       <p className="text-lg max-w-2xl mx-auto mb-6">
-        Helping farmers choose the most profitable crops and providing
-        insights to maximize yield and profit. Your one-stop solution for smart farming.
+        At KrishiSarthi, our mission is to empower farmers by providing easy access to vital agricultural information and intelligent decision-making tools. We understand the challenges faced by farmers today – unpredictable weather, soil health management, pest attacks, and yield optimization.
       </p>
       <a
         href="#features"

@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="bg-green-600 text-white px-6 py-4 flex justify-between items-center">
       <div className="text-2xl font-bold"><Link to="/" className="hover:text-gray-200">
-          Farmwise
+          Kissan Sarthi
         </Link></div>
       <div className="space-x-6">
         <Link to="/" className="hover:text-gray-200">

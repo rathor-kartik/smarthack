@@ -9,18 +9,18 @@
     "name": "Rice",
     "description": "Rice requires clayey soil and high water supply.",
     "successRate": 78,
-    "image": "/crop_image/coffee.jpg"
+    "image": "/crop_image/Rice.png"
   },
   {
     "name": "corn",
-    "description": "Rice requires clayey soil and high water supply.",
+    "description": "A versatile grain crop that grows well in well-drained fertile soil under warm and sunny conditions.",
     "successRate": 88,
-    "image": "/crop_image/coffee.jpg"
+    "image": "/crop_image/Corn.png"
   },
   {
     "name": "Tomato",
-    "description": "Rice requires clayey soil and high water supply.",
+    "description": "A popular vegetable crop preferring well-drained sandy loam soil and moderate watering.",
     "successRate": 55,
-    "image": "/crop_image/coffee.jpg"
+    "image": "/crop_image/Tomato.png"
   }
 ]
