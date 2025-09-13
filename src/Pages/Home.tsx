@@ -52,7 +52,7 @@ const Home: React.FC = () => {
         <h2 className="text-4xl font-bold text-center mb-12">About Us</h2>
         <div className="max-w-4xl mx-auto text-center text-gray-700 space-y-6">
           <p>
-            FarmWise is dedicated to empowering farmers with smart, data-driven
+            Kissan Sarthi is dedicated to empowering farmers with smart, data-driven
             solutions. We help you choose the best crops for your soil, provide
             detailed growth insights, and analyze profits so you can make
             informed decisions.
