@@ -7,7 +7,7 @@ import CropPieChart from "../Components/PieCharts";
 import SoilInfo from "../Components/SoilInfo";
 import WeatherFinder from "../Components/WeatherFinder";
 import cropsData from "../Data/cropdata.json";
-import Chatbot from "../Components/Chatbot";
+// import Chatbot from "../Components/Chatbot";
 
 const Home: React.FC = () => {
   return (

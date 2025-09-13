@@ -5,7 +5,7 @@ import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
 import Crops from "./Pages/Crops";
 import Insights from "./Pages/Insight";
-import Chatbot from "./Components/Chatbot";
+// import Chatbot from "./Components/Chatbot";
 
 const App: React.FC = () => {
   return (
