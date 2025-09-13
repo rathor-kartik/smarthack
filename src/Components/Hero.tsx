@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
         Your Trusted Companion for Smarter Farming!
       </h1>
       <p className="text-lg max-w-2xl mx-auto mb-6">
-        At KrishiSarthi, our mission is to empower farmers by providing easy access to vital agricultural information and intelligent decision-making tools. We understand the challenges faced by farmers today – unpredictable weather, soil health management, pest attacks, and yield optimization.
+        At Kissan Sarthi, our mission is to empower farmers by providing easy access to vital agricultural information and intelligent decision-making tools. We understand the challenges faced by farmers today – unpredictable weather, soil health management, pest attacks, and yield optimization.
       </p>
       <a
         href="#features"
